@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing animations transition and transform</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+            background-color: tomato;
+            margin: 3px;
+            text-align: center;
+            transition-property: all;
+            transition-duration: 1s;
+
+        }
+
+        .container {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        .box:hover {
+            background-color: rgb(71, 192, 223);
+            font-size: 90px;
+            height: 400px;
+            width: 400px;
+            border-radius: 9px;
+        }
+
+        #box-1 {
+            animation-name: shruti;
+            animation-duration: 4s;
+            animation-iteration-count: 4;
+            position: relative;
+        }
+
+        @keyframes shruti {
+            0%{
+                top: 0px;
+                left:0px ;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            50%{
+                top: 250px;
+                left: 250px;
+            }
+            75%{
+                top: 0px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box-1" style="height: 200px; width: 200px; border: 1px solid black;;">animation</div>
+
+<div class="container">
+    <div class="box">home</div>
+    <div class="box">about</div>
+    <div class="box">services</div>
+    <div class="box">contact us</div>
+
+</div>
+<div class="box" style="height: 200px; width: 200px; border: 1px solid black; margin: auto; margin-top:200px ; transform: rotate(45deg); ">home</div>
+
+</body>
+
+</html>
