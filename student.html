@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Information</h1>
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Mobile Number</th>
+        <th>Class</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be populated here -->
+    </tbody>
+  </table>
+
+  <script>
+    // JSON data
+    const students = [
+      { "rollNo": 101,
+       "name": "shruti", 
+       "mobile": "1234567890",
+       "class": "10th Grade", 
+       "gender": "Female" },
+
+      { "rollNo": 102,
+       "name": "Samruddhi",
+       "mobile": "9876543210", 
+       "class": "10th Grade", 
+       "gender": "Female" },
+
+      { "rollNo": 103, 
+      "name": "Ayush", 
+      "mobile": "5556667777", 
+      "class": "11th Grade", 
+      "gender": "Male" },
+
+      { "rollNo": 104, 
+      "name": "keshav", 
+      "mobile": "5556667777", 
+      "class": "11th Grade", 
+      "gender": "Male" },
+
+      { "rollNo": 105, 
+      "name": "Aman", 
+      "mobile": "5556667777", 
+      "class": "12th Grade", 
+      "gender": "Male" },
+
+      { "rollNo": 106, 
+      "name": "Ayushi", 
+      "mobile": "5556667777", 
+      "class": "9th Grade", 
+      "gender": "Female" },
+
+      { "rollNo": 107, 
+      "name": "Mayur", 
+      "mobile": "5556667777", 
+      "class": "12th Grade", 
+      "gender": "Male" },
+
+      { "rollNo": 108, 
+      "name": "Raj", 
+      "mobile": "5556667777", 
+      "class": "10th Grade", 
+      "gender": "Male" },
+
+      { "rollNo": 109, 
+      "name": "Anjira", 
+      "mobile": "5556667777", 
+      "class": "11th Grade", 
+      "gender": "Female" },
+
+      { "rollNo": 110, 
+      "name": "Shraddha", 
+      "mobile": "5556667777", 
+      "class": "12th Grade",
+       "gender": "Female" }
+    ];
+'<tr><td></td></tr>'
+    // Reference to the table body
+    const tableBody = document.querySelector("#studentTable tbody");
+
+    // Function to populate the table
+    // function populateTable(data) {
+    //   data.forEach(student => {
+    //     const row = document.createElement("tr");
+
+    //     // Create and append table cells
+    //     Object.values(student).forEach(value => {
+    //       const cell = document.createElement("td");
+    //       cell.textContent = value;
+    //       row.appendChild(cell);
+    //     });
+
+    //     // Append the row to the table body
+    //     tableBody.appendChild(row);
+    //   });
+    // }
+
+    
+    // Populate the table with student data
+    // populateTable(students);
+
+    //console.log(students);
+
+    for(let i=0;i<students.length;i++){
+       // console.log(students[i].rollNo);
+       // console.log(students[i].name);
+
+       var td="";
+       td='<td>'+students[i].rollNo+'</td>';
+        td+='<td>'+students[i].name+'</td>';
+        td+='<td>'+students[i].mobile+'</td>';
+        td+='<td>'+students[i].class+'</td>';
+        td+='<td>'+students[i].gender+'</td>';
+
+
+        var tr='<tr>'+td+'</tr>'
+        
+          
+
+        console.log(tr);
+
+        tableBody.innerHTML+=tr
+        
+
+    }
+  </script>
+</body>
+</html>
