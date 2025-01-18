@@ -138,6 +138,7 @@ const handleCancel = () => {
             value={formData.rollNo}
             onChange={handleChange}
             required
+            
           />
         </div>
 
@@ -172,6 +173,7 @@ const handleCancel = () => {
             value={formData.mobile}
             onChange={handleChange}
             required
+            pattern="[0-9]{10}"
           />
         </div>
 

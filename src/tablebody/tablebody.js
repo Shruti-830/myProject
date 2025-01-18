@@ -6,6 +6,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
+import Updateform from "../Updateform/Updateform";
 
 function Tablebody() {
     // State to hold student data
@@ -46,6 +47,7 @@ function Tablebody() {
   const handleEdit = (id) => {
     
     navigate(`/updateform/${id}`);
+    
    // let [catid, setCatId] = useState(0);
   //  setCatId(id);
    
@@ -88,6 +90,8 @@ function Tablebody() {
           })
       }
     });
+
+    navigate("/")
   };
     return (
       
